@@ -1,0 +1,15 @@
+{
+    "name": "docker-cicd-demo",
+    "version": "1.0.0",
+    "description": "A Simple Node.js App for Docker CI/CD Demonstration",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Running tests...\" && node test.js"
+    },
+    "dependencies": {
+        "express": "5.1.0"
+    },
+    "author": "Abdullah bin Amin",
+    "license": "MIT"
+}
