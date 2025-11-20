@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
+const process = require('process'); // Explicit require is safer
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.json({
         message: "Hello from Docker CI/CD Demo!",
-        timestamp: newDate().toISOString(),
+        timestamp: new Date().toISOString(), // FIXED: Space added
         version: '1.0.0'
     });
 });
@@ -18,7 +19,7 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Server Running on Port ${port}');
+    console.log(`Server Running on Port ${port}`); // Fixed template literal quotes
 });
 
-MediaSourceHandle.exports = app;
+module.exports = app; // FIXED: module.exports
